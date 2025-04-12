@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>FreeFont – Discover and Download Free Fonts for Designers & Creators</title>
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // 🎨 Your custom colors here
+                        //primary: '#cb0000',
+                        primary: '#DB073D',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- loader -->
+    <div id="loader" class="fixed top-0 left-0 w-full h-screen bg-white flex justify-center items-center z-50">
+        <div class="flex flex-col gap-4 items-center">
+            <div class="animate-pulse">
+                <img src="../assets/images/freeFontLogo_Red.svg" alt="logo" class="h-20 animate-bounce">
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="sticky top-0 w-full h-16 flex items-center bg-primary z-50">
+        <div class="max-w-[1400px] w-full m-auto px-3">
+            <div class="w-full flex justify-between items-center">
+                <div class="md:w-fit w-full md:justify-start justify-between items-center flex gap-4 z-20">
+                    <a href="/">
+                        <img class="h-10" src="../assets/images/freeFontLogo_White.svg" alt="logo">
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <form action="" class="relative max-w-[315px] w-full flex items-center">
+                            <input type="search" name="" id="" placeholder="Search..."
+                                class="w-full h-10 outline-none px-4 text-gray-700 text-sm font-light rounded-full">
+                            <button class="absolute right-3 bg-white text-gray-700 hover:text-primary">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+                        <div id="toggleMenu" class="md:hidden block text-white text-lg cursor-pointer">
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- desktop menu -->
+                <ul class="hidden w-fit md:flex text-white text-sm">
+                    <li>
+                        <a href="/" class="py-2 lg:px-6 px-3">New fonts</a>
+                    </li>
+                    <li>
+                        <a href="/themes" class="py-2 lg:px-6 px-3">Themes</a>
+                    </li>
+                    <li>
+                        <a href="/authors" class="py-2 lg:px-6 px-3">Authors</a>
+                    </li>
+                    <li>
+                        <a href="/faqs" class="py-2 lg:px-6 px-3">FAQs</a>
+                    </li>
+                    <li>
+                        <a href="/register" class="py-2 lg:px-6 px-3">Register</a>
+                    </li>
+                </ul>
+
+                <!-- mobile menu -->
+                <ul id="menu"
+                    class="md:hidden absolute top-16 py-10 left-0 bg-primary w-full flex flex-col items-center text-white text-sm gap-4 -translate-y-[750px] duration-300 ease-in-out z-10">
+                    <li>
+                        <a href="/" class="py-2 lg:px-6 px-3">New fonts</a>
+                    </li>
+                    <li>
+                        <a href="/themes" class="py-2 lg:px-6 px-3">Themes</a>
+                    </li>
+                    <li>
+                        <a href="/authors" class="py-2 lg:px-6 px-3">Authors</a>
+                    </li>
+                    <li>
+                        <a href="/faqs" class="py-2 lg:px-6 px-3">FAQs</a>
+                    </li>
+                    <li>
+                        <a href="/register" class="py-2 lg:px-6 px-3">Register</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- TabLinks -->
+    <section>
+        <div class="flex flex-col items-center justify-center h-screen">
+            <div class="flex flex-col items-center justify-center gap-4">
+                <h1 class="text-3xl font-bold text-gray-800">Welcome to FreeFont Admin</h1>
+                <p class="text-gray-600">Manage your fonts and settings here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- copyright -->
+    <section class="py-10">
+        <div class="max-w-[1400px] w-full m-auto px-3">
+            <div class="flex flex-col items-center gap-3">
+                <p class="text-gray-500 text-sm">Copyright <span id="copyright"></span> FreeFont. All rights
+                    reserved
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- general scripts -->
+    <script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>

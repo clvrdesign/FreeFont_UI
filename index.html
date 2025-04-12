@@ -49,15 +49,15 @@
     </section>
 
     <!-- navbar -->
-    <nav class="sticky top-0 w-full h-16 flex items-center bg-primary z-50">
+    <nav class="sticky top-0 w-full h-16 flex items-center bg-primary md:overflow-hidden overflow-unset z-50">
         <div class="max-w-[1400px] w-full m-auto px-3">
             <div class="w-full flex justify-between items-center">
                 <div class="md:w-fit w-full md:justify-start justify-between items-center flex gap-4 z-20">
                     <a href="/">
-                        <img class="h-10" src="assets/images/freeFontLogo_White.svg" alt="logo">
+                        <img class="h-10" src="../assets/images/freeFontLogo_White.svg" alt="logo">
                     </a>
                     <div class="flex items-center gap-3">
-                        <form action="" class="relative max-w-[315px] w-full flex items-center">
+                        <form action="" class="relative lg:max-w-[315px] max-w-[250px] w-full flex items-center">
                             <input type="search" name="" id="" placeholder="Search..."
                                 class="w-full h-10 outline-none px-4 text-gray-700 text-sm font-light rounded-full">
                             <button class="absolute right-3 bg-white text-gray-700 hover:text-primary">
@@ -73,19 +73,19 @@
                 <!-- desktop menu -->
                 <ul class="hidden w-fit md:flex text-white text-sm">
                     <li>
-                        <a href="/" class="py-2 lg:px-6 px-3">New fonts</a>
+                        <a href="/" class="py-[25px] lg:px-6 px-3 bg-gray-100 text-primary">New fonts</a>
                     </li>
                     <li>
-                        <a href="/themes" class="py-2 lg:px-6 px-3">Themes</a>
+                        <a href="/themes" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Themes</a>
                     </li>
                     <li>
-                        <a href="/authors" class="py-2 lg:px-6 px-3">Authors</a>
+                        <a href="/authors" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Authors</a>
                     </li>
                     <li>
-                        <a href="/faqs" class="py-2 lg:px-6 px-3">FAQs</a>
+                        <a href="/faqs" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">FAQs</a>
                     </li>
                     <li>
-                        <a href="/register" class="py-2 lg:px-6 px-3">Register</a>
+                        <a href="/login" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Upload font</a>
                     </li>
                 </ul>
 
@@ -93,7 +93,7 @@
                 <ul id="menu"
                     class="md:hidden absolute top-16 py-10 left-0 bg-primary w-full flex flex-col items-center text-white text-sm gap-4 -translate-y-[750px] duration-300 ease-in-out z-10">
                     <li>
-                        <a href="/" class="py-2 lg:px-6 px-3">New fonts</a>
+                        <a href="/" class="py-2 lg:px-6 px-3 text-gray-700">New fonts</a>
                     </li>
                     <li>
                         <a href="/themes" class="py-2 lg:px-6 px-3">Themes</a>
@@ -105,7 +105,7 @@
                         <a href="/faqs" class="py-2 lg:px-6 px-3">FAQs</a>
                     </li>
                     <li>
-                        <a href="/register" class="py-2 lg:px-6 px-3">Register</a>
+                        <a href="/login" class="py-2 lg:px-6 px-3">Upload font</a>
                     </li>
                 </ul>
 
