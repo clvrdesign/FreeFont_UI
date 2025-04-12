@@ -41,3 +41,9 @@ document.querySelectorAll(".bg-white button").forEach((button) => {
     icon.classList.toggle("rotate-180");
   });
 });
+
+
+// Loader
+window.addEventListener('load', function () {
+  document.getElementById('loader').style.display = 'none';
+});
