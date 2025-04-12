@@ -98,13 +98,15 @@
     </nav>
 
     <!-- TabLinks -->
-    <section class="sticky top-16 flex items-center z-10">
+    <section class="sticky top-16 bg-white flex items-center z-10">
         <div class="max-w-[1400px] w-full m-auto">
-            <div class="w-full md:bg-gray-100 bg-white md:rounded-xl rounded-none flex flex-col md:flex-row justify-between gap-2 items-center overflow-x-auto py-4 md:px-3 px-0">
+            <div
+                class="w-full md:rounded-xl rounded-none flex flex-col md:flex-row justify-between gap-2 items-center overflow-x-auto py-4 md:px-3 px-0">
                 <div class="md:block hidden min-w-fit">
                     <h1 class="text-2xl font-bold text-gray-700">My Account</h1>
                 </div>
-                <ul class="w-full flex md:justify-end justify-between items-center md:gap-10 gap-4 text-gray-700 text-sm px-3">
+                <ul
+                    class="w-full flex md:justify-end justify-between items-center md:gap-10 gap-4 text-gray-700 text-sm px-3">
                     <li>
                         <a href="/" class="py-3 lg:px-6 px-2 text-primary border-b-4 border-primary">Uploads</a>
                     </li>
@@ -122,11 +124,205 @@
         </div>
     </section>
 
-    <div>
-        <div class="max-w-[1400px] w-full m-auto px-3">
-            
+    <section class="py-4">
+        <div class="max-w-[1024px] w-full m-auto sm:px-3 px-0">
+            <div class="flex flex-col gap-4">
+
+                <small class="inline-block bg-amber-500 bg-opacity-20 text-amber-900 text-[12px] rounded-xl p-4 sm:mx-0 mx-3 my-2">
+                    <strong>Important:</strong> By submitting your font, you agree to the following terms:
+                    By submitting this form you certify that you are the author of the font, that it is not someone
+                    else's design, and that you have the publishing rights on it. You allow dafont.com to propose it
+                    for download, and you are aware that once online every visitor can freely download it, but
+                    dafont.com does not control the issues people do with the font. Dafont.com declines any
+                    responsibility in case of non-respect by the users of the terms mentionned in the text files.
+                </small>
+
+                <!-- Upload Card -->
+                <div class="bg-white sm:rounded-2xl rounded-none overflow-hidden sm:px-6 px-3 py-6">
+                    <!-- Card Header -->
+                    <div class="y-4">
+                        <h2 class="text-xl font-semibold text-gray-700">Upload New Font</h2>
+                        <p class="text-sm text-gray-500 mt-1">Upload your font files to add them to the library</p>
+                    </div>
+
+                    <!-- Upload Form -->
+                    <form action="" method="POST" enctype="multipart/form-data" class="flex gap-4 py-6">
+                        <div class="w-full flex md:flex-row flex-col gap-6">
+                            <div class="md:w-2/6 w-full">
+                                <!-- Drag & Drop Zone -->
+                                <div
+                                    class="w-full border border-dashed border-gray-300 hover:border-primary rounded-2xl p-8 text-center mb-6 hover:border-primary transition-colors duration-200 bg-gray-50">
+                                    <div class="flex flex-col items-center justify-center">
+                                        <label for="fontFile">
+                                            <div class="text-4xl text-gray-400 mb-4">
+                                                <i class="bi bi-cloud-arrow-up"></i>
+                                            </div>
+                                            <p class="text-sm text-gray-600 mb-2">Drag and drop your font files here or
+                                            </p>
+                                            <p class="text-sm text-primary mb-4">Browser files</p>
+                                            <input type="file" id="fontFile" name="fontFile"
+                                                accept=".ttf, .otf, .woff, .woff2" multiple class="hidden" required>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Selected Files Preview -->
+                                <div id="filePreview" class="hidden mb-6">
+                                    <h3 class="text-lg font-medium text-gray-700 mb-3">Selected Files</h3>
+                                    <ul id="fileList" class="space-y-2">
+                                        <!-- Files will be listed here dynamically -->
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="md:w-4/6 w-full">
+                                <!-- Font Metadata -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                                    <div>
+                                        <select id="fontWeight" name="fontWeight"
+                                            class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus:ring-gray-200">
+                                            <option disabled selected>Select theme</option>
+                                            <option value="light">Light</option>
+                                            <option value="regular">Regular</option>
+                                            <option value="medium">Medium</option>
+                                            <option value="bold">Bold</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <select id="fontStyle" name="fontStyle"
+                                            class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-gray-200">
+                                            <option value="normal" selected>Normal</option>
+                                            <option value="italic">Italic</option>
+                                        </select>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <label for="fontDescription"
+                                            class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                                        <textarea id="fontDescription" name="fontDescription" rows="3"
+                                            class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-gray-200"></textarea>
+                                    </div>
+                                </div>
+
+
+                                <!-- Submit Button -->
+                                <div class="flex justify-end space-x-3">
+                                    <button type="submit"
+                                        class="sm:w-fit w-full bg-primary text-white text-center text-sm py-2 px-6 rounded-lg transition duration-200 flex justify-center items-center">
+                                        Upload Font
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Upload Guidelines -->
+                <div class="bg-white rounded-2xl shadow-md shadow-gray-100 py-4 overflow-hidden">
+                    <div class="px-4">
+                        <h2 class="text-lg font-medium text-gray-700">Upload Guidelines</h2>
+                    </div>
+                    <div class="px-4 mt-4">
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start gap-2 text-sm">
+                                <i class="bi bi-check-circle text-primary"></i>
+                                <span>Accepted formats: .ttf, .otf, .woff, .woff2</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <i class="bi bi-check-circle text-primary"></i>
+                                <span>Maximum file size: 10MB per file</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <i class="bi bi-check-circle text-primary"></i>
+                                <span>Ensure you have proper rights to upload and distribute the font</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <i class="bi bi-check-circle text-primary"></i>
+                                <span>Provide accurate metadata for better discoverability</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <script>
+            // Drag and drop functionality
+            const dropZone = document.querySelector('.border-dashed');
+            const fileInput = document.getElementById('fontFile');
+            const filePreview = document.getElementById('filePreview');
+            const fileList = document.getElementById('fileList');
+
+            // Highlight drop zone when dragging over
+            ['dragenter', 'dragover'].forEach(eventName => {
+                dropZone.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    dropZone.classList.add('border-primary', 'bg-blue-50');
+                });
+            });
+
+            // Remove highlight when dragging leaves
+            ['dragleave', 'drop'].forEach(eventName => {
+                dropZone.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    dropZone.classList.remove('border-primary', 'bg-blue-50');
+                });
+            });
+
+            // Handle dropped files
+            dropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                if (e.dataTransfer.files.length) {
+                    fileInput.files = e.dataTransfer.files;
+                    updateFileList();
+                }
+            });
+
+            // Handle selected files via browse
+            fileInput.addEventListener('change', updateFileList);
+
+            // Update the file list preview
+            function updateFileList() {
+                if (fileInput.files.length > 0) {
+                    fileList.innerHTML = '';
+                    Array.from(fileInput.files).forEach(file => {
+                        const listItem = document.createElement('li');
+                        listItem.className = 'flex items-center justify-between bg-gray-50 p-3 rounded-lg';
+                        listItem.innerHTML = `
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                                <div>
+                                    <p class="text-gray-800 font-medium">${file.name}</p>
+                                    <p class="text-sm text-gray-500">${(file.size / 1024 / 1024).toFixed(2)} MB</p>
+                                </div>
+                            </div>
+                            <button type="button" class="text-red-500 hover:text-red-700" onclick="removeFile(this, '${file.name}')">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        `;
+                        fileList.appendChild(listItem);
+                    });
+                    filePreview.classList.remove('hidden');
+                } else {
+                    filePreview.classList.add('hidden');
+                }
+            }
+
+            // Remove file from the list
+            window.removeFile = function (button, fileName) {
+                const dt = new DataTransfer();
+                Array.from(fileInput.files)
+                    .filter(file => file.name !== fileName)
+                    .forEach(file => dt.items.add(file));
+
+                fileInput.files = dt.files;
+                updateFileList();
+            };
+        </script>
+    </section>
 
     <!-- copyright -->
     <section class="py-10">
