@@ -125,30 +125,31 @@
     </section>
 
     <!-- Main Content -->
-    <section class="relative py-10">
-        <div class="max-w-[1400px] w-full m-auto px-3">
-            <div class="flex flex-col md:flex-row gap-8">
-                
+    <section class="relative md:py-8 sm:py-4">
+        <div class="max-w-[1400px] w-full m-auto sm:px-3">
+            <div class="flex flex-col md:flex-row gap-4">
                 <!-- Sidebar Navigation -->
-                <aside class="sticky top-16 w-full md:w-64 flex-shrink-0">
-                    <div class="bg-white rounded-xl shadow-sm p-5">
-                        <h2 class="text-lg font-bold text-gray-700 mb-4">My Account</h2>
-                        <nav class="space-y-3 text-gray-700 text-sm">
+                <aside class="sm:sticky sm:top-16 fixed left-0 bottom-0 w-full md:w-64 flex-shrink-0 z-20">
+                    <div
+                        class="bg-white sm:rounded-2xl rounded-none md:shadow-lg md:shadow-gray-100 sm:px-5 md:py-8 sm:py-4 py-0">
+                        <h2 class="md:block hidden text-xl font-bold text-gray-700 mb-8">My Account</h2>
+                        <nav
+                            class="sm:space-y-3 md:block flex justify-between items-center text-gray-700 text-sm sm:py-0 py-2">
                             <a href="/account/profile"
-                                class="block px-4 py-3 rounded-lg bg-primary/10 text-primary font-medium">
-                                <i class="bi bi-person mr-2"></i> My profile
+                                class="flex items-center sm:flex-row flex-col px-4 py-2 rounded-lg sm:bg-primary/10 text-primary">
+                                <i class="bi bi-person mr-2"></i>Profile
                             </a>
                             <a href="/account/favorites"
-                                class="block px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-100">
-                                <i class="bi bi-heart mr-2"></i> My favorites
+                                class="flex items-center sm:flex-row flex-col px-4 py-2 rounded-lg text-gray-600 duration-300 hover:bg-gray-100">
+                                <i class="bi bi-heart mr-2"></i>Favorites
                             </a>
                             <a href="/account/uploads"
-                                class="block px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-100">
-                                <i class="bi bi-upload mr-2"></i> My uploads
+                                class="flex items-center sm:flex-row flex-col px-4 py-2 rounded-lg text-gray-600 duration-300 hover:bg-gray-100">
+                                <i class="bi bi-cloud-upload mr-2"></i>Uploads
                             </a>
                             <a href="/account/settings"
-                                class="block px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-100">
-                                <i class="bi bi-gear mr-2"></i> Settings
+                                class="flex items-center sm:flex-row flex-col px-4 py-2 rounded-lg text-gray-600 duration-300 hover:bg-gray-100">
+                                <i class="bi bi-gear mr-2"></i>Settings
                             </a>
                         </nav>
                     </div>
@@ -156,50 +157,89 @@
 
                 <!-- Profile Content -->
                 <div class="flex-1">
-                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-                      <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
-                        <h2 class="text-xl font-bold text-gray-700">My Favorites</h2>
-                        <p class="text-gray-500 text-sm">Your saved font collections</p>
-                      </div>
-                  
-                      <div class="p-6">
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                          <!-- Favorite Item -->
-                          <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
-                            <div class="font-montserrat text-2xl mb-3">Aa</div>
-                            <h3 class="font-medium">Montserrat</h3>
-                            <p class="text-gray-500 text-sm">by Julieta Ulanovsky</p>
-                            <button class="mt-3 text-primary hover:text-primary-dark text-sm flex items-center">
-                              <i class="bi bi-download mr-1"></i> Download
-                            </button>
-                          </div>
-                          
-                          <!-- More favorites... -->
+                    <div class="bg-white rounded-2xl shadow-lg shadow-gray-100 overflow-hidden">
+                        <!-- Profile Header -->
+                        <div class="bg-white sm:px-6 px-3 py-4 border-b border-gray-100">
+                            <h2 class="text-xl font-bold text-gray-700">My favorites</h2>
+                            <p class="text-gray-500 text-sm">Your saved font collections</p>
                         </div>
-                        
-                        <div class="mt-6 text-center">
-                          <button class="text-primary border border-primary px-4 py-2 rounded-lg hover:bg-primary/10">
-                            View All Favorites (24)
-                          </button>
+
+                        <!-- Profile Form -->
+                        <div class="md:p-6 p-3">
+                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                                <!-- Favorite Item -->
+                                <div class="relative bg-gray-50 border border-gray-200 rounded-xl p-4 hover:shadow-md transition">
+                                    <div class="font-montserrat text-2xl text-gray-700 mb-3">Aa</div>
+                                    <h3 class="font-medium text-gray-700">Montserrat</h3>
+                                    <p class="text-gray-500 text-sm">by Awa Melvine</p>
+                                    <button class="mt-3 text-primary hover:text-primary-dark text-sm flex items-center">
+                                        <i class="bi bi-cloud-download mr-1"></i> Download
+                                    </button>
+                                    <button class="absolute top-4 right-4 rounded-full text-gray-400 hover:text-primary">
+                                        <i class="bi bi-heart-fill text-primary"></i>
+                                    </button>
+                                </div>
+                                <div class="relative bg-gray-50 border border-gray-200 rounded-xl p-4 hover:shadow-md transition">
+                                    <div class="font-montserrat text-2xl text-gray-700 mb-3">Aa</div>
+                                    <h3 class="font-medium text-gray-700">Montserrat</h3>
+                                    <p class="text-gray-500 text-sm">by Awa Melvine</p>
+                                    <button class="mt-3 text-primary hover:text-primary-dark text-sm flex items-center">
+                                        <i class="bi bi-cloud-download mr-1"></i> Download
+                                    </button>
+                                    <button class="absolute top-4 right-4 rounded-full text-gray-400 hover:text-primary">
+                                        <i class="bi bi-heart-fill text-primary"></i>
+                                    </button>
+                                </div>
+                                <div class="relative bg-gray-50 border border-gray-200 rounded-xl p-4 hover:shadow-md transition">
+                                    <div class="font-montserrat text-2xl text-gray-700 mb-3">Aa</div>
+                                    <h3 class="font-medium text-gray-700">Montserrat</h3>
+                                    <p class="text-gray-500 text-sm">by Awa Melvine</p>
+                                    <button class="mt-3 text-primary hover:text-primary-dark text-sm flex items-center">
+                                        <i class="bi bi-cloud-download mr-1"></i> Download
+                                    </button>
+                                    <button class="absolute top-4 right-4 rounded-full text-gray-400 hover:text-primary">
+                                        <i class="bi bi-heart-fill text-primary"></i>
+                                    </button>
+                                </div>
+                                <div class="relative bg-gray-50 border border-gray-200 rounded-xl p-4 hover:shadow-md transition">
+                                    <div class="font-montserrat text-2xl text-gray-700 mb-3">Aa</div>
+                                    <h3 class="font-medium text-gray-700">Montserrat</h3>
+                                    <p class="text-gray-500 text-sm">by Awa Melvine</p>
+                                    <button class="mt-3 text-primary hover:text-primary-dark text-sm flex items-center">
+                                        <i class="bi bi-cloud-download mr-1"></i> Download
+                                    </button>
+                                    <button class="absolute top-4 right-4 rounded-full text-gray-400 hover:text-primary">
+                                        <i class="bi bi-heart-fill text-primary"></i>
+                                    </button>
+                                </div>
+                                <div class="relative bg-gray-50 border border-gray-200 rounded-xl p-4 hover:shadow-md transition">
+                                    <div class="font-montserrat text-2xl text-gray-700 mb-3">Aa</div>
+                                    <h3 class="font-medium text-gray-700">Montserrat</h3>
+                                    <p class="text-gray-500 text-sm">by Awa Melvine</p>
+                                    <button class="mt-3 text-primary hover:text-primary-dark text-sm flex items-center">
+                                        <i class="bi bi-cloud-download mr-1"></i> Download
+                                    </button>
+                                    <button class="absolute top-4 right-4 rounded-full text-gray-400 hover:text-primary">
+                                        <i class="bi bi-heart-fill text-primary"></i>
+                                    </button>
+                                </div>
+                                
+                                <!-- More favorites... -->
+                            </div>
+
+                            <div class="mt-6 mb-20 text-center">
+                                <button
+                                    class="text-sm text-white hover:text-primary px-6 py-2 rounded-full bg-primary duration-300 hover:bg-primary/10">
+                                    View All (24)
+                                </button>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
-    </section>
-
-    <!-- copyright -->
-    <section class="py-10">
-        <div class="max-w-[1400px] w-full m-auto px-3">
-            <div class="flex flex-col items-center gap-3">
-                <p class="text-gray-500 text-sm">Copyright <span id="copyright"></span> FreeFont. All rights
-                    reserved
-                </p>
-            </div>
         </div>
     </section>
-
 
     <!-- general scripts -->
     <script src="../../assets/js/script.js"></script>
