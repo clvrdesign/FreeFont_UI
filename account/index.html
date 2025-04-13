@@ -130,7 +130,7 @@
                     </div>
                 </aside>
 
-                <!-- Profile Content -->
+                <!-- Upload Content -->
                 <div class="flex-1">
                     <div class="bg-white rounded-2xl shadow-lg shadow-gray-100 overflow-hidden">
                         <!-- Profile Header -->
@@ -139,8 +139,7 @@
                             <p class="text-gray-500 text-sm">Upload your font files to add them to the library</p>
                         </div>
 
-
-                        <!-- Profile Form -->
+                        <!-- Upload Form -->
                         <div class="md:p-6 p-3">
                             <!-- Upload Guidelines -->
                             <div class="border border-amber-400 bg-amber-50 rounded-2xl p-4 my-4">
@@ -153,8 +152,7 @@
                                         </svg>
                                     </div>
                                     <div class="ml-3">
-                                        <h3 class="text-sm font-medium text-amber-800 mb-2">Submission Agreement
-                                        </h3>
+                                        <h3 class="text-sm font-medium text-amber-800 mb-2">Submission Agreement</h3>
                                         <div class="text-[12px] text-amber-700 space-y-2">
                                             <p>By submitting your font, you certify that:</p>
                                             <ul class="list-disc pl-5 space-y-1">
@@ -169,25 +167,30 @@
                                 </div>
                             </div>
 
+                            <!-- Font Preview Area -->
+                            <div id="previewArea" class="mt-6 space-y-4"></div>
+
                             <!-- Upload Form -->
                             <form action="" method="POST" enctype="multipart/form-data" class="flex gap-4 py-6">
                                 <div class="w-full flex md:flex-row flex-col gap-6">
+                                    <!-- Left Side -->
                                     <div class="md:w-2/6 w-full">
                                         <!-- Drag & Drop Zone -->
                                         <div
-                                            class="w-full border border-dashed border-gray-300 hover:border-primary rounded-2xl p-8 text-center mb-6 hover:border-primary transition-colors duration-200 bg-gray-50">
+                                            class="w-full border border-dashed border-gray-300 hover:border-primary rounded-2xl p-8 text-center mb-6 bg-gray-50 transition-colors duration-200">
                                             <div class="flex flex-col items-center justify-center">
-                                                <label for="fontFile">
+                                                <label for="fontFile" class="cursor-pointer">
                                                     <div class="text-4xl text-gray-400 mb-4">
                                                         <i class="bi bi-cloud-arrow-up"></i>
                                                     </div>
+                                                    <p class="text-[12px] text-gray-400 mb-2">(TTF, OTF, WOFF, WOFF2,
+                                                        ZIP)</p>
                                                     <p class="text-sm text-gray-600 mb-2">Drag and drop your font files
-                                                        here or
-                                                    </p>
-                                                    <p class="text-sm text-primary mb-4">Browser files</p>
-                                                    <input type="file" id="fontFile" name="fontFile"
-                                                        accept=".ttf, .otf, .woff, .woff2" multiple class="hidden"
-                                                        required>
+                                                        here or</p>
+                                                    <p class="text-sm text-primary mb-4 underline">Browse files</p>
+                                                    <input id="fontFile" name="fontFile" type="file"
+                                                        accept=".ttf, .otf, .woff, .woff2, .zip" multiple class="hidden"
+                                                        required aria-label="Upload font file">
                                                 </label>
                                             </div>
                                         </div>
@@ -201,39 +204,80 @@
                                         </div>
                                     </div>
 
+                                    <!-- Right Side -->
                                     <div class="md:w-4/6 w-full">
                                         <!-- Font Metadata -->
                                         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                                             <div>
+                                                <label for="fontDescription"
+                                                    class="text-sm text-gray-700 mb-1">Theme</label>
                                                 <select id="fontWeight" name="fontWeight"
-                                                    class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus:ring-gray-200">
-                                                    <option disabled selected>Select theme</option>
-                                                    <option value="light">Light</option>
-                                                    <option value="regular">Regular</option>
-                                                    <option value="medium">Medium</option>
-                                                    <option value="bold">Bold</option>
+                                                    class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus:ring-gray-200"
+                                                    required>
+                                                    <option selected disabled></option>
+                                                    <option value="Fancy">Fancy</option>
+                                                    <option value="Script">Script</option>
+                                                    <option value="Techno">Techno</option>
+                                                    <option value="Gothic">Gothic</option>
+                                                    <option value="Basic">Basic</option>
+                                                    <option value="Bitmap">Bitmap</option>
+                                                    <option value="Holiday">Holiday</option>
+                                                    <option value="Foreign Look">Foreign Look</option>
+                                                    <option value="Dingbats">Dingbats</option>
+                                                    <option value="Symbol">Symbol</option>
+                                                    <option value="Retro">Retro</option>
+                                                    <option value="Typewriter">Typewriter</option>
                                                 </select>
                                             </div>
                                             <div>
+                                                <label for="fontDescription"
+                                                    class="text-sm text-gray-700 mb-1">Style</label>
                                                 <select id="fontStyle" name="fontStyle"
-                                                    class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-gray-200">
-                                                    <option value="normal" selected>Normal</option>
-                                                    <option value="italic">Italic</option>
+                                                    class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus:ring-gray-200"
+                                                    required>
+                                                    <option selected disabled></option>
+                                                    <option value="Calligraphy">Calligraphy</option>
+                                                    <option value="School">School</option>
+                                                    <option value="Handwritten">Handwritten</option>
+                                                    <option value="Brush">Brush</option>
+                                                    <option value="Trash">Trash</option>
+                                                    <option value="Graffiti">Graffiti</option>
+                                                    <option value="Old School">Old School</option>
+                                                    <option value="Various">Various</option>
                                                 </select>
                                             </div>
                                             <div class="md:col-span-2">
                                                 <label for="fontDescription"
-                                                    class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                                                    class="text-sm text-gray-700 mb-1">License</label>
+                                                <select id="fontStyle" name="fontStyle"
+                                                    class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus:ring-gray-200"
+                                                    required>
+                                                    <option value="free">100% Free</option>
+                                                    <option value="personal">Free for Personal Use</option>
+                                                    <option value="commercial">Free for Commercial Use</option>
+                                                    <option value="donationware">Donationware</option>
+                                                    <option value="shareware">Shareware</option>
+                                                    <option value="demo">Demo</option>
+                                                    <option value="public_domain">Public Domain</option>
+                                                    <option value="ofl">Open Font License (OFL)</option>
+                                                    <option value="custom">Custom License</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="md:col-span-2">
+                                                <label for="fontDescription" class="text-sm text-gray-700 mb-1">Note of
+                                                    the author</label>
                                                 <textarea id="fontDescription" name="fontDescription" rows="3"
-                                                    class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-gray-200"></textarea>
+                                                    class="w-full min-h-40 text-sm font-light text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus:ring-gray-200"
+                                                    placeholder="Write a short description about your font..."
+                                                    required></textarea>
                                             </div>
                                         </div>
-
 
                                         <!-- Submit Button -->
                                         <div class="flex justify-end space-x-3 mb-20">
                                             <button type="submit"
-                                                class="sm:w-fit w-full bg-primary text-white text-center text-sm py-2 px-6 rounded-lg transition duration-200 flex justify-center items-center">
+                                                class="sm:w-fit w-full bg-primary text-white text-sm py-2 px-6 rounded-lg transition duration-200 hover:bg-primary/90 flex justify-center items-center">
                                                 Upload Font
                                             </button>
                                         </div>
@@ -243,6 +287,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
         </div>
@@ -251,6 +296,7 @@
     <!-- general scripts -->
     <script src="../../assets/js/script.js"></script>
 
+    <!-- Drag and drop functionality -->
     <script>
         // Drag and drop functionality
         const dropZone = document.querySelector('.border-dashed');
@@ -324,6 +370,69 @@
             updateFileList();
         };
     </script>
+
+
+    <!-- Font Preview -->
+    <script>
+        // font preview
+        const uploader = document.getElementById('fontUploader');
+        const previewArea = document.getElementById('previewArea');
+
+        uploader.addEventListener('change', async (event) => {
+            const files = Array.from(event.target.files);
+
+            for (const file of files) {
+                const ext = file.name.split('.').pop().toLowerCase();
+
+                if (ext === 'ttf' || ext === 'otf') {
+                    loadFont(file);
+                } else if (ext === 'zip') {
+                    const zip = await JSZip.loadAsync(file);
+                    Object.keys(zip.files).forEach(async (zipFileName, index) => {
+                        const zipExt = zipFileName.split('.').pop().toLowerCase();
+                        if (zipExt === 'ttf' || zipExt === 'otf') {
+                            const fontData = await zip.files[zipFileName].async('arraybuffer');
+                            loadFontFromBuffer(fontData, zipFileName, index);
+                        }
+                    });
+                }
+            }
+        });
+
+        function loadFont(file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const fontData = e.target.result;
+                const fontName = file.name.replace(/\.[^/.]+$/, "");
+                const font = new FontFace(fontName, fontData);
+                font.load().then((loadedFont) => {
+                    document.fonts.add(loadedFont);
+                    createFontPreview(fontName, file.name);
+                });
+            };
+            reader.readAsArrayBuffer(file);
+        }
+
+        function loadFontFromBuffer(buffer, filename, index) {
+            const fontName = `Font_${index}_${filename.replace(/\.[^/.]+$/, "")}`;
+            const font = new FontFace(fontName, buffer);
+            font.load().then((loadedFont) => {
+                document.fonts.add(loadedFont);
+                createFontPreview(fontName, filename);
+            });
+        }
+
+        function createFontPreview(fontFamily, label) {
+            const preview = document.createElement('div');
+            preview.className = 'text-2xl font-bold text-gray-800';
+            preview.style.fontFamily = fontFamily;
+            preview.innerText = `Preview: ${label}`;
+            previewArea.appendChild(preview);
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
+
+
 </body>
 
 </html>
