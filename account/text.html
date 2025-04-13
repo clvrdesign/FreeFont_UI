@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>FreeFont – Discover and Download Free Fonts for Designers & Creators</title>
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // 🎨 Your custom colors here
+                        //primary: '#cb0000',
+                        primary: '#DB073D',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- loader -->
+    <div id="loader" class="fixed top-0 left-0 w-full h-screen bg-white flex justify-center items-center z-50">
+        <div class="flex flex-col gap-4 items-center">
+            <div class="animate-pulse">
+                <img src="../assets/images/freeFontLogo_Red.svg" alt="logo" class="h-20 animate-bounce">
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="sticky top-0 w-full h-16 flex items-center bg-primary z-50">
+        <div class="max-w-[1400px] w-full m-auto px-3">
+            <div class="w-full flex justify-between items-center">
+                <div class="md:w-fit w-full md:justify-start justify-between items-center flex gap-4 z-20">
+                    <a href="/">
+                        <img class="h-10" src="../assets/images/freeFontLogo_White.svg" alt="logo">
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <form action="" class="relative max-w-[315px] w-full flex items-center">
+                            <input type="search" name="" id="" placeholder="Search..."
+                                class="w-full h-10 outline-none px-4 text-gray-700 text-sm font-light rounded-full">
+                            <button class="absolute right-3 bg-white text-gray-700 hover:text-primary">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+                        <div id="toggleMenu" class="md:hidden block text-white text-lg cursor-pointer">
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- desktop menu -->
+                <ul class="hidden w-fit md:flex text-white text-sm">
+                    <li>
+                        <a href="/" class="py-2 lg:px-6 px-3">New fonts</a>
+                    </li>
+                    <li>
+                        <a href="/themes" class="py-2 lg:px-6 px-3">Themes</a>
+                    </li>
+                    <li>
+                        <a href="/authors" class="py-2 lg:px-6 px-3">Authors</a>
+                    </li>
+                    <li>
+                        <a href="/faqs" class="py-2 lg:px-6 px-3">FAQs</a>
+                    </li>
+                </ul>
+
+                <!-- mobile menu -->
+                <ul id="menu"
+                    class="md:hidden absolute top-16 py-10 left-0 bg-primary w-full flex flex-col items-center text-white text-sm gap-4 -translate-y-[750px] duration-300 ease-in-out z-10">
+                    <li>
+                        <a href="/" class="py-2 lg:px-6 px-3">New fonts</a>
+                    </li>
+                    <li>
+                        <a href="/themes" class="py-2 lg:px-6 px-3">Themes</a>
+                    </li>
+                    <li>
+                        <a href="/authors" class="py-2 lg:px-6 px-3">Authors</a>
+                    </li>
+                    <li>
+                        <a href="/faqs" class="py-2 lg:px-6 px-3">FAQs</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- TabLinks -->
+    <section class="sticky top-16 bg-white flex items-center z-10">
+        <div class="max-w-[1400px] w-full m-auto">
+            <div
+                class="w-full md:rounded-xl rounded-none flex flex-col md:flex-row justify-between gap-2 items-center overflow-x-auto py-4 md:px-3 px-0">
+                <div class="md:block hidden min-w-fit">
+                    <h1 class="text-2xl font-bold text-gray-700">My Account</h1>
+                </div>
+                <ul
+                    class="w-full flex md:justify-end justify-between items-center md:gap-10 gap-4 text-gray-700 text-sm px-3">
+                    <li>
+                        <a href="/" class="py-3 lg:px-6 px-2 text-primary border-b-4 border-primary">Uploads</a>
+                    </li>
+                    <li>
+                        <a href="/" class="py-2 lg:px-6 px-2">Profile</a>
+                    </li>
+                    <li>
+                        <a href="/" class="py-2 lg:px-6 px-2">Favorites</a>
+                    </li>
+                    <li>
+                        <a href="/" class="py-2 lg:px-6 px-2">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="max-w-[1024px] w-full m-auto sm:px-3 px-0">
+            <div class="flex flex-col gap-4">
+
+                <small class="inline-block bg-amber-500 bg-opacity-20 text-amber-900 text-[12px] rounded-xl p-4 sm:mx-0 mx-3 my-2">
+                    <strong>Important:</strong> By submitting your font, you agree to the following terms:
+                    By submitting this form you certify that you are the author of the font, that it is not someone
+                    else's design, and that you have the publishing rights on it. You allow dafont.com to propose it
+                    for download, and you are aware that once online every visitor can freely download it, but
+                    dafont.com does not control the issues people do with the font. Dafont.com declines any
+                    responsibility in case of non-respect by the users of the terms mentionned in the text files.
+                </small>
+
+                <!-- Upload Card -->
+                <div class="bg-white sm:rounded-2xl rounded-none overflow-hidden sm:px-6 px-3 py-6">
+                    <!-- Card Header -->
+                    <div class="y-4">
+                        <h2 class="text-xl font-semibold text-gray-700">Upload New Font</h2>
+                        <p class="text-sm text-gray-500 mt-1">Upload your font files to add them to the library</p>
+                    </div>
+
+                    <!-- Upload Form -->
+                    <form action="" method="POST" enctype="multipart/form-data" class="flex gap-4 py-6">
+                        <div class="w-full flex md:flex-row flex-col gap-6">
+                            <div class="md:w-2/6 w-full">
+                                <!-- Drag & Drop Zone -->
+                                <div
+                                    class="w-full border border-dashed border-gray-300 hover:border-primary rounded-2xl p-8 text-center mb-6 hover:border-primary transition-colors duration-200 bg-gray-50">
+                                    <div class="flex flex-col items-center justify-center">
+                                        <label for="fontFile">
+                                            <div class="text-4xl text-gray-400 mb-4">
+                                                <i class="bi bi-cloud-arrow-up"></i>
+                                            </div>
+                                            <p class="text-sm text-gray-600 mb-2">Drag and drop your font files here or
+                                            </p>
+                                            <p class="text-sm text-primary mb-4">Browser files</p>
+                                            <input type="file" id="fontFile" name="fontFile"
+                                                accept=".ttf, .otf, .woff, .woff2" multiple class="hidden" required>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Selected Files Preview -->
+                                <div id="filePreview" class="hidden mb-6">
+                                    <h3 class="text-lg font-medium text-gray-700 mb-3">Selected Files</h3>
+                                    <ul id="fileList" class="space-y-2">
+                                        <!-- Files will be listed here dynamically -->
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="md:w-4/6 w-full">
+                                <!-- Font Metadata -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                                    <div>
+                                        <select id="fontWeight" name="fontWeight"
+                                            class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus:ring-gray-200">
+                                            <option disabled selected>Select theme</option>
+                                            <option value="light">Light</option>
+                                            <option value="regular">Regular</option>
+                                            <option value="medium">Medium</option>
+                                            <option value="bold">Bold</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <select id="fontStyle" name="fontStyle"
+                                            class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-gray-200">
+                                            <option value="normal" selected>Normal</option>
+                                            <option value="italic">Italic</option>
+                                        </select>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <label for="fontDescription"
+                                            class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                                        <textarea id="fontDescription" name="fontDescription" rows="3"
+                                            class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-gray-200"></textarea>
+                                    </div>
+                                </div>
+
+
+                                <!-- Submit Button -->
+                                <div class="flex justify-end space-x-3">
+                                    <button type="submit"
+                                        class="sm:w-fit w-full bg-primary text-white text-center text-sm py-2 px-6 rounded-lg transition duration-200 flex justify-center items-center">
+                                        Upload Font
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Upload Guidelines -->
+                <div class="bg-white rounded-2xl shadow-md shadow-gray-100 py-4 overflow-hidden">
+                    <div class="px-4">
+                        <h2 class="text-lg font-medium text-gray-700">Upload Guidelines</h2>
+                    </div>
+                    <div class="px-4 mt-4">
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start gap-2 text-sm">
+                                <i class="bi bi-check-circle text-primary"></i>
+                                <span>Accepted formats: .ttf, .otf, .woff, .woff2</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <i class="bi bi-check-circle text-primary"></i>
+                                <span>Maximum file size: 10MB per file</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <i class="bi bi-check-circle text-primary"></i>
+                                <span>Ensure you have proper rights to upload and distribute the font</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <i class="bi bi-check-circle text-primary"></i>
+                                <span>Provide accurate metadata for better discoverability</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Drag and drop functionality
+            const dropZone = document.querySelector('.border-dashed');
+            const fileInput = document.getElementById('fontFile');
+            const filePreview = document.getElementById('filePreview');
+            const fileList = document.getElementById('fileList');
+
+            // Highlight drop zone when dragging over
+            ['dragenter', 'dragover'].forEach(eventName => {
+                dropZone.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    dropZone.classList.add('border-primary', 'bg-blue-50');
+                });
+            });
+
+            // Remove highlight when dragging leaves
+            ['dragleave', 'drop'].forEach(eventName => {
+                dropZone.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    dropZone.classList.remove('border-primary', 'bg-blue-50');
+                });
+            });
+
+            // Handle dropped files
+            dropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                if (e.dataTransfer.files.length) {
+                    fileInput.files = e.dataTransfer.files;
+                    updateFileList();
+                }
+            });
+
+            // Handle selected files via browse
+            fileInput.addEventListener('change', updateFileList);
+
+            // Update the file list preview
+            function updateFileList() {
+                if (fileInput.files.length > 0) {
+                    fileList.innerHTML = '';
+                    Array.from(fileInput.files).forEach(file => {
+                        const listItem = document.createElement('li');
+                        listItem.className = 'flex items-center justify-between bg-gray-50 p-3 rounded-lg';
+                        listItem.innerHTML = `
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                                <div>
+                                    <p class="text-gray-800 font-medium">${file.name}</p>
+                                    <p class="text-sm text-gray-500">${(file.size / 1024 / 1024).toFixed(2)} MB</p>
+                                </div>
+                            </div>
+                            <button type="button" class="text-red-500 hover:text-red-700" onclick="removeFile(this, '${file.name}')">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        `;
+                        fileList.appendChild(listItem);
+                    });
+                    filePreview.classList.remove('hidden');
+                } else {
+                    filePreview.classList.add('hidden');
+                }
+            }
+
+            // Remove file from the list
+            window.removeFile = function (button, fileName) {
+                const dt = new DataTransfer();
+                Array.from(fileInput.files)
+                    .filter(file => file.name !== fileName)
+                    .forEach(file => dt.items.add(file));
+
+                fileInput.files = dt.files;
+                updateFileList();
+            };
+        </script>
+    </section>
+
+    <!-- copyright -->
+    <section class="py-10">
+        <div class="max-w-[1400px] w-full m-auto px-3">
+            <div class="flex flex-col items-center gap-3">
+                <p class="text-gray-500 text-sm">Copyright <span id="copyright"></span> FreeFont. All rights
+                    reserved
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- general scripts -->
+    <script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>
