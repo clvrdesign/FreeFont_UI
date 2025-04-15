@@ -142,67 +142,30 @@
                         <!-- Upload Form -->
                         <div class="md:p-6 p-3">
 
-
-                            <!-- Upload Guidelines -->
-                            <div class="border border-blue-400 bg-blue-50 rounded-2xl p-4 mb-6">
+                            <!-- Upload Agreement -->
+                            <div class="border border-amber-400 bg-amber-50 rounded-2xl p-4 sm:mb-0 mb-20">
                                 <div class="flex items-start">
                                     <div class="flex-shrink-0">
-                                        <svg class="h-5 w-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <svg class="h-5 w-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd"
                                                 d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
                                                 clip-rule="evenodd"></path>
                                         </svg>
                                     </div>
                                     <div class="ml-3">
-                                        <h3 class="text-sm font-medium text-blue-800 mb-2">Upload Guidelines</h3>
-                                        <div class="text-[12px] text-blue-700 space-y-2">
-                                            <p>Please review these requirements before submitting your font</p>
+                                        <h3 class="text-sm font-medium text-amber-800 mb-2">Submission Agreement</h3>
+                                        <div class="text-[12px] text-amber-700 space-y-2">
+                                            <p>By submitting your font, you certify that:</p>
                                             <ul class="list-disc pl-5 space-y-1">
-                                                <li>
-                                                    <strong class="font-medium">
-                                                        Review Process:
-                                                    </strong> Publication is not
-                                                    automatic. Each font is carefully reviewed by our team before being
-                                                    published.
-                                                </li>
-                                                <li>
-                                                    <strong class="font-medium">
-                                                        Character Set:
-                                                    </strong> Fonts must include at
-                                                    minimum a complete A-Z and a-z character set (Latin alphabet).
-                                                </li>
-                                                <li>
-                                                    <strong class="font-medium">
-                                                        Permanence:
-                                                    </strong> Temporary fonts are not
-                                                    accepted. Submitted fonts should remain available indefinitely and
-                                                    not be
-                                                    removed after publication.
-                                                </li>
-                                                <li>
-                                                    <strong class="font-medium">
-                                                        Originality:
-                                                    </strong> You must be the original creator or have legal rights to
-                                                    distribute the font.
-                                                </li>
-                                                <li>
-                                                    <strong class="font-medium">
-                                                        File Format:
-                                                    </strong> Acceptable formats: .ttf, .otf, .woff, .woff2 (or .zip
-                                                    containing these formats).
-                                                </li>
-
+                                                <li>You are the original author of the font</li>
+                                                <li>You hold all necessary publishing rights</li>
+                                                <li>You grant FreeFont permission to distribute it</li>
                                             </ul>
-                                            <p class="italic mt-2">
-                                                <strong>
-                                                    Note:
-                                                </strong> Approval typically takes 3-5 business days. You'll
-                                                receive an email notification once your font has been reviewed.
-                                            </p>
+                                            <p class="italic mt-2">Note: FreeFont cannot control how users employ
+                                                downloaded fonts and declines responsibility for misuse.</p>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
 
                             <!-- Upload Form -->
@@ -310,6 +273,23 @@
                                             </div>
                                         </div>
 
+                                        <div class="">
+                                            <div class="flex items-start">
+                                                <div class="flex items-center h-5 mt-1">
+                                                    <input id="agreement-checkbox" type="checkbox"
+                                                        class="h-[12px] w-[12px] accent-primary text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                                                        required>
+                                                </div>
+                                                <div class="ml-3">
+                                                    <label for="agreement-checkbox" class="text-sm text-gray-700">
+                                                        I have read and agree to this Font Submission <a class="text-primary" href="/account/agreement-terms-and-conditions">Agreement</a> 
+                                                    </label>
+                                                    <p class="text-xs text-gray-500 mt-1">By checking this box, you electronically
+                                                        sign this agreement</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <!-- Submit Button -->
                                         <div class="flex justify-end space-x-3">
                                             <button type="submit"
@@ -321,31 +301,6 @@
                                 </div>
                             </form>
 
-                            <!-- Upload Agreement -->
-                            <div class="border border-amber-400 bg-amber-50 rounded-2xl p-4 sm:mb-0 mb-20">
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0">
-                                        <svg class="h-5 w-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd"
-                                                d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="ml-3">
-                                        <h3 class="text-sm font-medium text-amber-800 mb-2">Submission Agreement</h3>
-                                        <div class="text-[12px] text-amber-700 space-y-2">
-                                            <p>By submitting your font, you certify that:</p>
-                                            <ul class="list-disc pl-5 space-y-1">
-                                                <li>You are the original author of the font</li>
-                                                <li>You hold all necessary publishing rights</li>
-                                                <li>You grant FreeFont permission to distribute it</li>
-                                            </ul>
-                                            <p class="italic mt-2">Note: FreeFont cannot control how users employ
-                                                downloaded fonts and declines responsibility for misuse.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
