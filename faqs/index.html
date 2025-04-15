@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#D69B31">
+    <meta name="description" content="Discover and download free fonts for designers and creators.">
+    <meta name="keywords" content="free fonts, font downloads, typography, design resources">
+    <meta name="author" content="FreeFont">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
@@ -19,7 +23,7 @@
                     colors: {
                         // 🎨 Your custom colors here
                         //primary: '#cb0000',
-                        primary: '#DB073D',
+                        primary: '#D69B31',
                     }
                 }
             }
@@ -40,7 +44,7 @@
 
 
     <!-- Ad banner -->
-    <section class="bg-primary z-50">
+    <section class="hidden bg-primary z-50">
         <div class="max-w-[1400px] mx-auto px-3 py-4">
             <div class="bg-white rounded-xl p-4 flex flex-col items-center">
                 <h2 class="text-xl font-bold text-gray-700 mb-4">Ad Banner</h2>
@@ -77,16 +81,19 @@
                         <a href="/" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">New fonts</a>
                     </li>
                     <li>
-                        <a href="/themes" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Themes</a>
+                        <a href="/themes"
+                            class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Themes</a>
                     </li>
                     <li>
-                        <a href="/authors" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Authors</a>
+                        <a href="/authors"
+                            class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Authors</a>
                     </li>
                     <li>
                         <a href="/faqs" class="py-[25px] lg:px-6 px-3 bg-gray-100 text-primary">FAQs</a>
                     </li>
                     <li>
-                        <a href="/login" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Upload font</a>
+                        <a href="/register" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Sign
+                            Up</a>
                     </li>
                 </ul>
 
@@ -106,7 +113,7 @@
                         <a href="/faqs" class="py-2 lg:px-6 px-3 text-gray-700">FAQs</a>
                     </li>
                     <li>
-                        <a href="/login" class="py-2 lg:px-6 px-3">Upload font</a>
+                        <a href="/register" class="py-2 lg:px-6 px-3">Sign Up</a>
                     </li>
                 </ul>
 
@@ -249,25 +256,32 @@
     <!-- Ad banner -->
     <section>
         <div class="max-w-[1400px] mx-auto px-3 py-4">
-            <div class="bg-white rounded-xl shadow-lg shadow-gray-200 px-4 py-8 flex flex-col items-center">
-                <h2 class="text-xl font-bold text-gray-700 mb-4">Ad Banner</h2>
-                <p class="text-gray-700 text-sm">This is an ad banner. You can place your ad content here.</p>
+            <div class="bg-white rounded-xl px-4 py-8 min-h-60 flex flex-col justify-center items-center">
+                <h2 class="text-xl font-bold text-gray-700 mb-2">Ad Banner</h2>
+                <p class="text-gray-700 text-center text-sm">This is an ad banner. You can place your ad content here.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter -->
+
+    <!-- Contact us -->
     <section class="py-10">
         <div class="max-w-[1400px] w-full m-auto px-3">
-            <div class="bg-primary h-[315px] flex flex-col justify-center rounded-3xl flex-col items-center gap-3 px-4">
-                <h1 class="text-4xl font-bold text-white">Newsletter</h1>
-                <p class="text-white text-sm max-w-[450px] text-center">Subscribe to our Newsletter so you get a
-                    notification whenever a new font is updated</p>
-                <form action="" class="relative max-w-[315px] w-full flex items-center">
+            <div
+                class="bg-primary min-h-[315px] flex flex-col justify-center rounded-3xl flex-col items-center gap-3 py-10 px-4">
+                <h1 class="text-4xl font-bold text-white">Contact us</h1>
+                <p class="text-white text-sm max-w-[450px] text-center">Have questions or suggestions? Send us a message and we'll get back to you soon.</p>
+                <form action="" class="relative max-w-[415px] w-full flex flex-col items-center gap-2">
+                    <input type="text" name="" id="" placeholder="Name"
+                        class="w-full h-10 outline-none px-4 text-gray-700 text-sm font-light rounded-xl">
                     <input type="email" name="" id="" placeholder="Email"
-                        class="w-full h-10 outline-none px-4 text-gray-700 text-sm font-light rounded-full">
-                    <button class="absolute right-3 bg-white text-gray-700 hover:text-primary">
-                        <i class="bi bi-bell"></i>
+                        class="w-full h-10 outline-none px-4 text-gray-700 text-sm font-light rounded-xl">
+                    <textarea id="message" placeholder="Message" name="message" rows="4"
+                        class="w-full resize-none outline-none p-4 text-gray-700 text-sm font-light rounded-xl"
+                        required></textarea>
+                    <button class="absolute bottom-3 right-3 text-sm bg-primary text-white px-3 py-1 rounded-lg">
+                        Send
                     </button>
                 </form>
             </div>
@@ -278,7 +292,8 @@
     <section class="py-10">
         <div class="max-w-[1400px] w-full m-auto px-3">
             <div class="flex flex-col items-center gap-3">
-                <p class="text-gray-500 text-sm">Copyright <span id="copyright"></span> FreeFont. All rights reserved
+                <p class="text-gray-500 text-sm">Copyright <span id="copyright"></span> FreeFont. All rights
+                    reserved
                 </p>
             </div>
         </div>

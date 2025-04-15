@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#DB073D">
+    <meta name="theme-color" content="#D69B31">
+    <meta name="description" content="Discover and download free fonts for designers and creators.">
+    <meta name="keywords" content="free fonts, font downloads, typography, design resources">
+    <meta name="author" content="FreeFont">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 
@@ -20,7 +23,8 @@
                     colors: {
                         // 🎨 Your custom colors here
                         //primary: '#cb0000',
-                        primary: '#DB073D',
+                        //primary: '#DB073D',
+                        primary: '#D69B31',
                     }
                 }
             }
@@ -40,11 +44,12 @@
     </div>
 
     <!-- Ad banner -->
-    <section class="bg-primary z-50">
+    <section class="hidden bg-primary z-50">
         <div class="max-w-[1400px] mx-auto px-3 py-4">
             <div class="bg-white rounded-xl p-4 flex flex-col items-center">
                 <h2 class="text-xl font-bold text-gray-700 mb-4">Ad Banner</h2>
-                <p class="text-gray-700 text-sm">This is an ad banner. You can place your ad content here.</p>
+                <p class="text-gray-700 text-center text-sm">This is an ad banner. You can place your ad content here.
+                </p>
             </div>
         </div>
     </section>
@@ -77,16 +82,19 @@
                         <a href="/" class="py-[25px] lg:px-6 px-3 bg-gray-100 text-primary">New fonts</a>
                     </li>
                     <li>
-                        <a href="/themes" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Themes</a>
+                        <a href="/themes"
+                            class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Themes</a>
                     </li>
                     <li>
-                        <a href="/authors" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Authors</a>
+                        <a href="/authors"
+                            class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Authors</a>
                     </li>
                     <li>
                         <a href="/faqs" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">FAQs</a>
                     </li>
                     <li>
-                        <a href="/login" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Upload font</a>
+                        <a href="/register/" class="py-[25px] lg:px-6 px-3 hover:bg-gray-700 hover:bg-opacity-20">Sign
+                            Up</a>
                     </li>
                 </ul>
 
@@ -106,7 +114,7 @@
                         <a href="/faqs" class="py-2 lg:px-6 px-3">FAQs</a>
                     </li>
                     <li>
-                        <a href="/login" class="py-2 lg:px-6 px-3">Upload font</a>
+                        <a href="/register/" class="py-2 lg:px-6 px-3">Sign Up</a>
                     </li>
                 </ul>
 
@@ -115,8 +123,14 @@
     </nav>
 
     <!-- hero section -->
-    <section class="relative md:h-[515px] h-[415px] w-full flex items-center justify-between bg-primary">
-        <div class="max-w-[1400px] w-full m-auto px-3">
+    <section
+        class="relative md:h-[515px] h-[415px] w-full flex items-center justify-between bg-primary overflow-hidden">
+        <div id="hero" class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary to-transparent">
+            <img class="h-full w-full object-cover opacity-20 mix-blend-multiply grayscale"
+                src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="">
+        </div>
+        <div class="max-w-[1400px] w-full m-auto px-3 z-10">
             <h1 class="md:max-w-[550px] max-w-[375px] m-auto md:text-5xl text-3xl text-white font-bold text-center">
                 Download our Premium Font for Free Wherever You Are.
             </h1>
@@ -272,9 +286,10 @@
     <!-- Ad banner -->
     <section>
         <div class="max-w-[1400px] mx-auto px-3 py-4">
-            <div class="bg-white rounded-xl shadow-lg shadow-gray-200 px-4 py-8 flex flex-col items-center">
-                <h2 class="text-xl font-bold text-gray-700 mb-4">Ad Banner</h2>
-                <p class="text-gray-700 text-sm">This is an ad banner. You can place your ad content here.</p>
+            <div class="bg-white rounded-xl px-4 py-8 min-h-60 flex flex-col justify-center items-center">
+                <h2 class="text-xl font-bold text-gray-700 mb-2">Ad Banner</h2>
+                <p class="text-gray-700 text-center text-sm">This is an ad banner. You can place your ad content here.
+                </p>
             </div>
         </div>
     </section>
