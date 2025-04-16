@@ -49,3 +49,21 @@ window.addEventListener("load", function () {
     document.getElementById("loader").style.display = "none";
   }, 500);
 });
+
+
+// Function to set the theme color dynamically
+function setThemeColor(color) {
+  let metaTag = document.querySelector('meta[name="theme-color"]');
+  if (!metaTag) {
+    metaTag = document.createElement('meta');
+    metaTag.name = 'theme-color';
+    document.head.appendChild(metaTag);
+  }
+  metaTag.setAttribute('content', color);
+}
+
+// Set theme color based on Tailwind's custom primary color
+document.addEventListener('DOMContentLoaded', () => {
+  const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--color-primary').trim();
+  setThemeColor(primaryColor);
+});
