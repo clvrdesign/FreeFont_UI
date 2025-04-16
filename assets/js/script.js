@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   copyright.innerHTML = year;
 });
 
-
 // faqs
 document.querySelectorAll(".bg-white button").forEach((button) => {
   button.addEventListener("click", () => {
@@ -42,8 +41,11 @@ document.querySelectorAll(".bg-white button").forEach((button) => {
   });
 });
 
-
 // Loader
-window.addEventListener('load', function () {
-  document.getElementById('loader').style.display = 'none';
+window.addEventListener("load", function () {
+  document.getElementById("loader").style.transition = "opacity 0.5s";
+  document.getElementById("loader").style.opacity = "0";
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+  }, 500);
 });
