@@ -7,11 +7,11 @@
     <meta name="description" content="Discover and download free fonts for designers and creators.">
     <meta name="keywords" content="free fonts, font downloads, typography, design resources">
     <meta name="author" content="FreeFont">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <title>FreeFont – Discover and Download Free Fonts for Designers & Creators</title>
     <!-- tailwindcss -->
-    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="../assets/css/output.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -105,18 +105,69 @@
         </div>
     </nav>
 
-    <!-- hero section -->
-    <section
-        class="relative md:h-[515px] h-[415px] w-full flex items-center justify-between bg-primary overflow-hidden">
-        <div id="hero" class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary to-transparent">
-            <img class="h-full w-full object-cover opacity-20 mix-blend-multiply grayscale"
-                src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="">
-        </div>
-        <div class="max-w-[1400px] w-full m-auto px-3 z-10">
-            <h1 class="md:max-w-[550px] max-w-[375px] m-auto md:text-5xl text-3xl text-white font-bold text-center">
-                Download our Premium Font for Free Wherever You Are.
-            </h1>
+    <!-- Preview & Filters -->
+    <section class="sticky md:top-12 top-0 md:py-4 my-0 z-20">
+        <div class="max-w-[1400px] w-full m-auto px-3">
+            <!-- Filter Panel -->
+            <div id="filterBtn" class="md:hiddens block fixed top-1/2 -left-6 h-8 w-fit bg-primary text-white pt-1 px-4 rounded-b-xl -rotate-90 text-gray-700 cursor-pointer z-50">
+                Filters
+            </div>
+            <div
+            id="filterContainer"
+                class="md:relative fixed md:top-0 top-16 left-0 bg-white md:w-full w-[275px] md:-translate-x-0 -translate-x-[275px] duration-300 md:h-auto h-screen flex md:flex-row flex-col md:justify-between justify-start md:items-center items-start gap-4 px-4 py-4 md:rounded-2xl rounded-none shadow md:shadow-none z-20">
+                <div class="md:w-fit w-full flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-medium text-gray-800">
+                            <i class="fi fi-rr-settings-sliders inline-block translate-y-0.5 mr-2"></i>
+                            Filter
+                        </h2>
+                        <p class="text-sm text-gray-500 mt-1">Filter by categories</p>
+                    </div>
+                    <div id="caretBtn" class="md:hidden block text-gray-700 cursor-pointer">
+                        <i class="fi fi-rr-angle-small-left text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div
+                    class="md:w-fit w-full flex md:flex-row flex-col gap-4 md:items-center items-start md:justify-between">
+
+                    <!-- Preview Text -->
+                    <div class="md:w-fit w-full flex flex-col gap-1">
+                        <label for="font-preview" class="text-sm text-gray-700">Preview</label>
+                        <input type="text" id="font-preview" placeholder="Type your text here"
+                            class="px-3 py-2 text-sm font-light text-gray-700 border border-gray-200 bg-gray-100 rounded-lg outline-none focus:border-gray-300 transition duration-300">
+                    </div>
+
+                    <!-- Font Size -->
+                    <div class="w-full flex flex-col gap-1">
+                        <label for="font-size" class="text-sm text-gray-700">Font size</label>
+                        <select id="font-size"
+                            class="px-3 py-2 text-sm font-light text-gray-700 border border-gray-200 bg-gray-100 rounded-lg outline-none focus:border-gray-300 transition duration-300">
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+
+                    <!-- Licence Type -->
+                    <div class="w-full flex flex-col gap-1">
+                        <label for="font-license" class="text-sm text-gray-700">Licence</label>
+                        <select id="font-license"
+                            class="px-3 py-2 text-sm font-light text-gray-700 border border-gray-200 bg-gray-100 rounded-lg outline-none focus:border-gray-300 transition duration-300">
+                            <option value="free">Free</option>
+                            <option value="demo">Demo</option>
+                            <option value="shareware">Shareware</option>
+                            <option value="commercial">Commercial use</option>
+                            <option value="personal">Personal use</option>
+                            <option value="unknown">Unknown</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay Background for Mobile -->
+            <div id="overlay" class="fixed top-0 left-0 w-full h-screen bg-gray-950 bg-opacity-30 translate-x-[100%] md:translate-x-[100%] z-10 transition duration-300"></div>
+
         </div>
     </section>
 
@@ -258,10 +309,10 @@
                 </div>
             </div>
             <div class="flex justify-center">
-                <a href="/fonts" class="bg-primary w-fit flex items-center gap-1 py-3 px-8 rounded-full text-white text-sm">
+                <button class="bg-primary w-fit flex items-center gap-1 py-3 px-8 rounded-full text-white text-sm">
                     <i class="bi bi-arrow-clockwise"></i>
                     Load more
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -306,7 +357,10 @@
     </section>
 
     <!-- general scripts -->
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <!-- filter -->
+    <script src="../assets/js/script.js"></script>
 
 </body>
 

@@ -1,0 +1,27 @@
+{
+  "name": "freefont_ui",
+  "version": "1.0.0",
+  "description": "A modern, open-source platform to explore, preview, and download free fonts for personal and commercial use. Inspired by dafont.com, FreeFont offers a clean, user-friendly interface, advanced search filters, and font previews to help designers find the perfect typeface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clvrdesign/FreeFont_UI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clvrdesign/FreeFont_UI/issues"
+  },
+  "homepage": "https://github.com/clvrdesign/FreeFont_UI#readme",
+  "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.3.1",
+    "@tailwindcss/cli": "^4.1.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

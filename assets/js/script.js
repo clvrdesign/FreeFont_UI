@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleMenu.addEventListener("click", () => {
     menu.classList.toggle("-translate-y-[750px]");
     if (menu.classList.contains("-translate-y-[750px]")) {
-      toggleMenu.innerHTML = '<i class="bi bi-three-dots-vertical"></i>';
+      toggleMenu.innerHTML = '<i class="fi fi-rr-bars-staggered text-lg translate-y-0.5"></i>';
     } else {
-      toggleMenu.innerHTML = '<i class="bi bi-x"></i>';
+      toggleMenu.innerHTML = '<i class="fi fi-rr-cross-small text-lg translate-y-0.5"></i>';
     }
   });
 });
@@ -67,3 +67,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--color-primary').trim();
   setThemeColor(primaryColor);
 });
+
+
+// Elements
+const filterContainer = document.getElementById('filterContainer');
+const caretBtn = document.getElementById('caretBtn'); // to close
+const filterBtn = document.getElementById('filterBtn'); // to open
+const overlay = document.getElementById('overlay');
+
+// Open Filter
+filterBtn.addEventListener('click', () => {
+  filterContainer.classList.remove('-translate-x-[275px]');
+  filterContainer.classList.add('translate-x-0');
+  
+  overlay.classList.remove('translate-x-[100%]');
+  overlay.classList.add('translate-x-0');
+  
+  filterBtn.classList.add('hidden'); // hide open button
+});
+
+// Close Filter
+caretBtn.addEventListener('click', () => {
+  filterContainer.classList.remove('translate-x-0');
+  filterContainer.classList.add('-translate-x-[275px]');
+  
+  overlay.classList.remove('translate-x-0');
+  overlay.classList.add('translate-x-[100%]');
+  
+  filterBtn.classList.remove('hidden'); // show open button
+});
+
